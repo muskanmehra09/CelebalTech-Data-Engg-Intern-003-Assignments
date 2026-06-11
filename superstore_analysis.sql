@@ -342,8 +342,4 @@ JOIN avg_sales  a  ON 1 = 1
 WHERE ct.total_sales > a.avg_total
 ORDER BY ct.total_sales DESC;
 
--- ============================================================
--- END OF SCRIPT
--- Output: Run each section to verify results
--- Deliverable: This SQL script + query result screenshots
--- ============================================================
+

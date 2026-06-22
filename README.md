@@ -17,6 +17,14 @@ Each file demonstrates a different concept in data engineering, analysis, or pro
     - Transformation (rename, new column)
     - Aggregation (count, avg, min, max)
 
+## Assignment 5 - Spark Data Processing
+Proof screenshots included:
+- LOAD DATA.png
+- After cleaning.png
+- Transformation.png
+- Aggregation.png
+- Validation.png
+
 - **Data Cleaning Notebook**
   - `shopping_data_cleaning.ipynb` → Jupyter Notebook for cleaning shopping dataset with Pandas.
 

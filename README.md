@@ -1,50 +1,71 @@
-# 📚 Data Engineering & Analysis Assignments
+🌸 CelebalTech Data Engineering Internship — Assignment Portfolio
+This repository is a pastel‑aesthetic showcase of my CelebalTech Data Engineering Internship (Assignments 1–8). Each task reflects structured learning, hands‑on coding, and a touch of creativity 💖.
 
-This repository contains multiple assignments completed during coursework.  
-Each file demonstrates a different concept in data engineering, analysis, or processing.
+🧠 Assignment 1 — Python Basics & Data Exploration
 
----
+Practiced Python fundamentals with Pandas.
 
-## 📂 Contents
+Explored datasets (head(), tail(), info()) and understood data types.
 
-- **SQL Analysis**
-  - `superstore_analysis.sql` → Business queries, filtering, aggregation, and insights from Superstore dataset.
 
-- **Spark Data Processing**
-  - `spark_task.py` → PySpark script for backpacks dataset:
-    - Load CSV
-    - Cleaning (nulls, duplicates)
-    - Transformation (rename, new column)
-    - Aggregation (count, avg, min, max)
 
-## Assignment 5 - Spark Data Processing
-Proof screenshots included:
-- LOAD DATA.png
-- After cleaning.png
-- Transformation.png
-- Aggregation.png
-- Validation.png
+🧹 Assignment 2 — Data Cleaning & Transformation
 
-- **Data Cleaning Notebook**
-  - `shopping_data_cleaning.ipynb` → Jupyter Notebook for cleaning shopping dataset with Pandas.
+Handled missing values, duplicates, and applied transformations.
 
-- **Datasets**
-  - `backpacks.csv` → Raw dataset
-  - `backpacks_cleaned.csv` → Cleaned dataset after processing
+Focused on clean, structured datasets for analysis.
 
-- **Validation Proofs**
-  - `Validation.png` → Screenshot proof of assignment execution
 
----
 
-## 🚀 How to Use
-- Clone the repo
-- Open respective files for each assignment
-- Run scripts in Python/VS Code with required libraries (PySpark, Pandas, SQL)
+📊 Assignment 3 — Data Aggregation & Analysis
 
----
+Implemented group‑by, pivot tables, and KPIs.
 
-## 📝 Notes
-- This is a **common repo** for all assignments.
-- Each file is self-contained and demonstrates required steps.
-- Screenshots and cleaned datasets are included for validation.
+Derived insights like category‑wise sales and profit.
+
+
+
+🧾 Assignment 4 — Delta Lake MERGE Implementation
+
+Learned upsert operations and dataset versioning.
+
+Practiced scalable data handling with Delta Lake.
+
+⚙️ Assignment 5 — Data Validation & Integrity
+
+Built validation checks for schema consistency.
+
+Ensured accuracy and reliability of datasets.
+
+
+
+🔄 Assignment 6 — Data Transformation Pipeline
+
+Designed a mini ETL pipeline with joins and derivations.
+
+Focused on modular, reusable code.
+
+
+
+🧮 Assignment 7 — Superstore Data Cleaning
+
+Cleaned Superstore dataset using Pandas.
+
+Created derived column total_amount = price * quantity.
+
+Exported cleaned CSV + notebook proof.
+
+
+
+🛍️ Assignment 8 — E‑Commerce Order Analytics System
+
+Developed analytics workflow for e‑commerce orders.
+
+Cleaned inconsistent data, wrote SQL queries for segmentation, revenue trends, and cohort analysis.
+
+Delivered notebook, SQL script, and proof screenshots.
+
+
+✨ Outcome
+This repo reflects my end‑to‑end data engineering journey — from Python basics to advanced SQL analytics.
+It’s not just assignments, it’s a classy pastel portfolio that blends technical depth with aesthetic clarity 🌸💎.

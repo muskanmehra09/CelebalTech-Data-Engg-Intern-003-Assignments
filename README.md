@@ -63,39 +63,30 @@ The system also calculates a **Data Trust Score** to measure overall data integr
 
 ---
 
-## 🖥️ Implementation (Python Draft)
+# 🔄 Cross System Data Drift
 
-```python
+## 🌸 Project Overview
+This project is designed to ensure **data consistency and trust** across multiple enterprise systems — CRM, Billing, and Analytics.  
+The focus is on detecting and resolving **data quality challenges** that often occur when information flows between different platforms.
 
-import pandas as pd
+---
 
-# Load sample datasets
-crm = pd.read_csv("CRM.csv")
-billing = pd.read_csv("Billing.csv")
-analytics = pd.read_csv("Analytics.csv")
+## ✨ Key Highlights
+- 🕵️ Detect **missing records** across systems  
+- 🔁 Identify **duplicate entries** that affect accuracy  
+- ⚖️ Spot **value mismatches** between CRM and Billing data  
+- 📈 Monitor **data drift over time** to track anomalies  
+- 💯 Calculate a **Data Trust Score** that reflects overall reliability  
 
-# 1. Missing records
-missing_in_billing = crm[~crm["OrderID"].isin(billing["OrderID"])]
+---
 
-# 2. Duplicate entries
-duplicates = billing[billing.duplicated("OrderID")]
+## 🌷 Outcome
+By implementing this project, organizations gain:  
+- Clear visibility into data health  
+- Confidence in analytics and reporting  
+- A structured framework to resolve inconsistencies  
 
-# 3. Value mismatches
-mismatch = crm.merge(billing, on="OrderID")
-mismatch = mismatch[mismatch["Amount_x"] != mismatch["Amount_y"]]
-
-# 4. Data drift (monthly average comparison)
-crm_monthly = crm.groupby("Month")["Amount"].mean()
-billing_monthly = billing.groupby("Month")["Amount"].mean()
-drift = crm_monthly - billing_monthly
-
-# 5. Data Trust Score
-valid_records = len(crm) - len(missing_in_billing) - len(duplicates) - len(mismatch)
-trust_score = (valid_records / len(crm)) * 100
-print("Data Trust Score:", trust_score)
-
-## ✨ Outcome
+This task represents a **real‑world data engineering challenge** — blending technical rigor with aesthetic clarity 💫
 This repo captures my **end‑to‑end data engineering journey** — from Python basics to advanced SQL analytics.  
 It’s not just assignments, it’s a **classy pastel portfolio** that blends technical precision with aesthetic clarity 🌷💫  
 
----

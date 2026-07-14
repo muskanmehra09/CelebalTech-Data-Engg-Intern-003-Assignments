@@ -1,0 +1,7 @@
+- Loaded Superstore dataset into Pandas
+- Explored shape, columns, and datatypes
+- Handled missing values by filling with 0
+- Filtered rows and selected specific columns
+- Removed duplicates
+- Created derived column total_amount = Sales * Quantity
+- Exported cleaned dataset as Superstore_Cleaned.csv

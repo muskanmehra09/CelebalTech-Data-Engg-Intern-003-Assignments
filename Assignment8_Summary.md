@@ -1,0 +1,5 @@
+- Created synthetic dataset with missing values
+- Cleaned data using Pandas (fillna, drop_duplicates)
+- Derived column TotalAmount = Quantity * Price
+- Saved cleaned dataset as ECommerce_Cleaned.csv
+- Wrote SQL queries for segmentation, revenue trends, and cohort analysis

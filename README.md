@@ -47,6 +47,53 @@ This repository reflects my journey of learning, building, and presenting data e
 
 ---
 
+
+
+# 🔄 Project Task — Cross System Data Drift
+
+## 📖 Description
+This project focuses on building a system that compares data across **CRM, Billing, and Analytics systems** to ensure consistency and reliability.  
+The goal is to detect and resolve **data quality issues** such as:
+- Missing records  
+- Duplicate entries  
+- Value mismatches  
+- Data drift over time  
+
+The system also calculates a **Data Trust Score** to measure overall data integrity and presents results in a clear, structured format for stakeholders.
+
+---
+
+## 🖥️ Implementation (Python Draft)
+
+```python
+
+import pandas as pd
+
+# Load sample datasets
+crm = pd.read_csv("CRM.csv")
+billing = pd.read_csv("Billing.csv")
+analytics = pd.read_csv("Analytics.csv")
+
+# 1. Missing records
+missing_in_billing = crm[~crm["OrderID"].isin(billing["OrderID"])]
+
+# 2. Duplicate entries
+duplicates = billing[billing.duplicated("OrderID")]
+
+# 3. Value mismatches
+mismatch = crm.merge(billing, on="OrderID")
+mismatch = mismatch[mismatch["Amount_x"] != mismatch["Amount_y"]]
+
+# 4. Data drift (monthly average comparison)
+crm_monthly = crm.groupby("Month")["Amount"].mean()
+billing_monthly = billing.groupby("Month")["Amount"].mean()
+drift = crm_monthly - billing_monthly
+
+# 5. Data Trust Score
+valid_records = len(crm) - len(missing_in_billing) - len(duplicates) - len(mismatch)
+trust_score = (valid_records / len(crm)) * 100
+print("Data Trust Score:", trust_score)
+
 ## ✨ Outcome
 This repo captures my **end‑to‑end data engineering journey** — from Python basics to advanced SQL analytics.  
 It’s not just assignments, it’s a **classy pastel portfolio** that blends technical precision with aesthetic clarity 🌷💫  

@@ -1,0 +1,20 @@
+-- Customer segmentation by total spend
+SELECT Customer, SUM(TotalAmount) AS TotalSpend
+FROM Orders
+GROUP BY Customer;
+
+-- Revenue trend by product
+SELECT Product, SUM(TotalAmount) AS Revenue
+FROM Orders
+GROUP BY Product
+ORDER BY Revenue DESC;
+
+-- Cohort analysis (monthly active customers)
+WITH monthly_orders AS (
+  SELECT Customer, DATE_TRUNC('month', OrderDate) AS Month, COUNT(*) AS Orders
+  FROM Orders
+  GROUP BY Customer, DATE_TRUNC('month', OrderDate)
+)
+SELECT Month, COUNT(DISTINCT Customer) AS ActiveCustomers
+FROM monthly_orders
+GROUP BY Month;
